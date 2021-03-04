@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simulador Financeiro</title>
+    </head>
+
+    <body style="height:890px;">
+        <div style="width: 25%; height: 100%; float:left; background-color: #fd0000c7"></div>
+
+        <div style="width: 50%; float:left">
+            <center>
+                <h1>Orçamento do Investimento</h1>
+                <span style="font-size: 20px;">
+                    Informe a metragem do local em m²
+                    <br>
+                    <input id="iptMetragem" placeholder="ex: 5">
+                    <br>
+                    Informe os seus lucros por mês 
+                    <br>
+                    <input id="iptLucrosMensais" placeholder="ex: 1275.25">
+                    <br><br>
+                    <button onclick="calcularInvestimento()">Calcular</button>
+                </span>
+                <div>
+                 <div id="divExibir">
+                    
+                 </div>   
+            </center>
+                </div>
+        </div>
+
+        <div style="width: 25%; height: 100%; float:left; background-color: #fd0000c7"></div>
+    </body>
+
+</html>
+
+<script>
+    function calcularInvestimento() 
+    {
+        var metragem = Number(iptMetragem.value);
+        var lucroMensal = Number(iptLucrosMensais.value);
+        var totalMudas = metragem * 8;
+        var kilosPorCiclo = totalMudas * 0.80;
+        var lucroTotal = kilosPorCiclo * 8.15;
+        var totalSensores = totalMudas / 6;
+
+        divExibir.innerHTML = 
+        `O total do seu investimento é de R$ ${totalSensores * 250} <br>
+         O aumento do lucro é de R$ ${lucroTotal - lucroMensal}
+        `;
+    }
+</script>
