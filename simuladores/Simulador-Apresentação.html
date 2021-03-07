@@ -8,15 +8,15 @@
         <title>Simulador Financeiro</title>
     </head>
 
-    <body style="height: 890px;background-color: #2B1F5C;">
-        <div style="width:100%; height:5%; background-color:#321c53;"></div> <!--Div de Moldura-->
+    <body style="height: 890px;background-color: #770808;;">
+        <div style="width:100%; height:5%; background-color:#36A172;"></div> <!--Div de Moldura-->
         
         <div style="width:100%; height:90%;">
         <!-- Div do Conteudo -->
 
             <div style="width: 12%; height:100%; float: left;">
                 <br><br><br><br><br><br><br><br><br><br>
-                <img src="C:\Users\USUARIO\Desktop\Projeto-dos-Morangos\strawberry.png">
+                <img src="C:\Users\Zezinho\Desktop\Projeto-dos-Morangos\strawberry.png">
                  <!-- IMPORTANTE trocar onde se encontra USUARIO para o usuario do computador-->
             </div>
 
@@ -37,9 +37,9 @@
                         <br>
                         <input id="iptLucroMensal" style="width: 250px;" placeholder="Insira o valor em reais. Ex: 1500">
                         <br><br>
-                        <b style="font-size:20px">Insira quantos morangos você possui no estoque</b>
+                        <b style="font-size:20px">Insira quantos kilos de morango você possui no estoque</b>
                         <br>
-                        <input id="iptQtdMorango" style="width: 250px;" placeholder="Ex: 10">
+                        <input id="iptKiloMorango" style="width: 250px;" placeholder="Ex: 10">
                         <br><br>
                         <button onclick="calcularInvestimento()">Calcular</button>
                         <br><br> 
@@ -54,12 +54,12 @@
         
             <div style="width: 11%; height:100%; float: left;">
                 <br><br><br><br><br><br><br><br><br><br>
-                <img src="C:\Users\USUARIO\Desktop\strawberry2.png">
+                <img src="C:\Users\Zezinho\Desktop\Projeto-dos-Morangos\strawberry.png">
                   <!-- IMPORTANTE trocar onde se encontra USUARIO para o usuario do computador-->
             </div>
 
         </div> 
-        <div style="width:100%; height:5%; background-color: #321c53;"></div> <!--Div de Moldura-->
+        <div style="width:100%; height:5%; background-color: #36A172;"></div> <!--Div de Moldura-->
     </body>
 
 </html>
@@ -67,13 +67,13 @@
 <script>
     function calcularInvestimento()
     {   
-        // Valores fixos
-        var precoMorango = 1.93;
+        // Valores de Preço
+        var precoMorango = 11.25;
 
         // Entrada dos Inputs
         var metragem = Number(iptMetragem.value);
         var lucroAtual = Number(iptLucroMensal.value);
-        var qtdMorango = Number(iptQtdMorango.value);
+        var qtdMorango = Number(iptKiloMorango.value);
 
         // Contas
         var totalMudas = metragem * 8;
@@ -86,7 +86,7 @@
         ` De acordo com a metragem desejada o numero de sensores utilizados seria de ${totalSensores}, <br>
           O custo médio do investimento de acordo com o numero dos sensores é de ${totalSensores * 200}. <br><br>
           O aumento do lucro ao instalar o sistema é de R$${lucroTotal - lucroAtual}. <br><br>
-          Supondo que o custo médio do morango seja de R$${1.93} você lucrará R$${lucroEstoque} com os seus morangos. 
+          Supondo que o custo médio do kilo do morango seja de R$${precoMorango} você lucrará R$${lucroEstoque} com os seus morangos. 
         `;
     }
 </script>
