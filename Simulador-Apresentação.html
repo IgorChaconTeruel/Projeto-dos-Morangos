@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simulador Financeiro</title>
+    </head>
+
+    <body style="height: 890px;background-color: #2B1F5C;">
+        <div style="width:100%; height:5%; background-color:#321c53;"></div> <!--Div de Moldura-->
+        
+        <div style="width:100%; height:90%;">
+        <!-- Div do Conteudo -->
+
+            <div style="width: 12%; height:100%; float: left;">
+                <br><br><br><br><br><br><br><br><br><br>
+                <img src="C:\Users\USUARIO\Desktop\Projeto-dos-Morangos\strawberry.png">
+                 <!-- IMPORTANTE trocar onde se encontra USUARIO para o usuario do computador-->
+            </div>
+
+            <div style="width: 76%; height:100%; float: left;">
+                <center>
+
+                    <br>
+                    <b style="font-size:50px; color: #36A172;"><u>Calculo de Orçamento e Renda</u></b>
+                    <br><br>
+
+                    <div style="height: 50%; color: #36A172;">
+                        <!--Div de Inserção-->
+                        <b style="font-size:20px">Insira em quantos metros quadrados deseja implementar o sistema</b>
+                        <br>
+                        <input id="iptMetragem" style="width: 250px;" placeholder="Insira o valor em m². Ex: 42">
+                        <br><br>
+                        <b style="font-size:20px">Insira o lucro mensal atual</b>
+                        <br>
+                        <input id="iptLucroMensal" style="width: 250px;" placeholder="Insira o valor em reais. Ex: 1500">
+                        <br><br>
+                        <b style="font-size:20px">Insira quantos morangos você possui no estoque</b>
+                        <br>
+                        <input id="iptQtdMorango" style="width: 250px;" placeholder="Ex: 10">
+                        <br><br>
+                        <button onclick="calcularInvestimento()">Calcular</button>
+                        <br><br> 
+
+                    </div> 
+                    <div style="height: 50%; color: #36A172; font-size: 25px;" id="divExibir">
+                        <!-- Div de Exibição-->
+                    </div> 
+
+                </center>
+            </div>
+        
+            <div style="width: 11%; height:100%; float: left;">
+                <br><br><br><br><br><br><br><br><br><br>
+                <img src="C:\Users\USUARIO\Desktop\strawberry2.png">
+                  <!-- IMPORTANTE trocar onde se encontra USUARIO para o usuario do computador-->
+            </div>
+
+        </div> 
+        <div style="width:100%; height:5%; background-color: #321c53;"></div> <!--Div de Moldura-->
+    </body>
+
+</html>
+
+<script>
+    function calcularInvestimento()
+    {   
+        // Valores fixos
+        var precoMorango = 1.93;
+
+        // Entrada dos Inputs
+        var metragem = Number(iptMetragem.value);
+        var lucroAtual = Number(iptLucroMensal.value);
+        var qtdMorango = Number(iptQtdMorango.value);
+
+        // Contas
+        var totalMudas = metragem * 8;
+        var kilosPorCiclo = totalMudas * 0.80;
+        var lucroTotal = kilosPorCiclo * 8.15;
+        var totalSensores = totalMudas / 6;
+        var lucroEstoque = precoMorango * qtdMorango;
+
+        divExibir.innerHTML = 
+        ` De acordo com a metragem desejada o numero de sensores utilizados seria de ${totalSensores}, <br>
+          O custo médio do investimento de acordo com o numero dos sensores é de ${totalSensores * 200}. <br><br>
+          O aumento do lucro ao instalar o sistema é de R$${lucroTotal - lucroAtual}. <br><br>
+          Supondo que o custo médio do morango seja de R$${1.93} você lucrará R$${lucroEstoque} com os seus morangos. 
+        `;
+    }
+</script>
