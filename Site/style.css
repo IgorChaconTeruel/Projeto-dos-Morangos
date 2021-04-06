@@ -1,0 +1,275 @@
+/* GERAL */
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: lightgreen;
+}
+
+.container
+{
+    width: 80%;
+    margin: auto;
+}
+
+.btn-orange
+{
+    background-color: rgb(39, 146, 39);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+}
+
+.btn-orange:hover
+{
+    background-color: lightgreen;
+    cursor: pointer;
+    transform: scale(1.2); 
+}
+/*INCIO ESTILO HEADER*/
+.header
+{
+    background-color: #a22121;
+    width: 100%;
+    height: 80px;
+    border-bottom: solid lightgreen 3px;
+    position: fixed;
+}
+
+.header h1
+{
+    float: left;
+    color: white;
+}
+
+.header ul
+{
+    /* Tira as bolinhas da lista */
+    list-style: none;
+    float: right;
+}
+
+.header li
+{
+    /* coloca os elementos da lista lado a lado como bloco */
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 6px;
+}
+
+.header ul li a
+{
+    /* Tira o sublinhado */
+    text-decoration: none;
+    color: white;
+}
+
+.header h1, .header ul
+{
+    margin-top: 20px;
+}
+.header img {
+height: 80px;
+margin: auto;
+padding-left:275px ;
+padding-bottom: 10px;
+}
+
+.text-orange
+{
+    color: lightgreen;
+    font-weight: bold;
+}
+/* Fim estilo Header */
+
+/* Inicio Banner */
+.banner
+{
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    background-image:url(Imagens/morangos.jpg);
+    background-size: cover;
+}
+.banner h1
+{
+    font-weight:lighter;
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+    
+.banner h3
+{
+    font-size: 25px;
+    font-weight: lighter;
+    margin-top: 15px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Fim Banner */
+
+/* Inicio Novidades */
+.news
+{
+    width: 100%;
+    height: 100px;
+    background-color: #a22121;
+    text-align: center; 
+}
+
+.news button
+{
+    margin-top: 30px;
+}
+/* Fim novidades */
+
+/* Inicio Missao Visao e Valores */
+.box
+{
+    text-align: center;
+    
+}
+.box-item
+{
+    display: inline-block;
+    width: 33%;
+    margin-top: 50px;
+}
+
+.box-item img
+{
+    width: 100px;
+    margin-top: 25px;
+}
+
+.box-item h3, .box-item p
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/* Fim Missao Visao e Valores */
+
+/* Inicio História */
+.conteudo
+{
+    width: 100%;
+    height: 735px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    background-image: url(Imagens/morangos.jpg);
+    background-size: cover;
+}
+
+.conteudo h1
+{
+    padding-top: 10px;
+    font-weight:lighter;
+    color: lavender;
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+    
+.conteudo p
+{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-top: 15px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.texto-banner
+{
+    background-color: rgb(245, 245, 245 ,0.5);
+    padding: 50px;
+}
+.texto-banner h1
+{
+  color: black;
+}
+.texto-banner p
+{
+  color: black;
+}
+.img-banner
+{
+    height: 100px;
+}
+
+.img-banner img
+{
+    width: 150px;
+    height: 180px;
+    border-radius: 100%;
+}
+
+/* Fim História */
+
+/* Inicio Equipe */
+.equipe
+{
+    text-align: center;
+}
+
+.equipe-item
+{
+    text-align: center;
+    width: 30%;
+    border-bottom-style: solid ;
+    border-color: orangered;
+    display: inline-block;
+    margin: 50px 10px 10px;
+    padding: 10px 10px 15px; 
+    color: white;
+    background-color: #a22121;
+}
+
+.equipe-item img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-top: 25px;
+}
+
+.equipe-item-inferior
+{
+    text-align: center;
+    width: 30%;
+    border-bottom-style: solid ;
+    border-color: orangered;
+    display: inline-block;
+    margin: 50px 10px 10px;
+    padding: 10px 10px 15px; 
+    color: white;
+    background-color: #a22121;
+}
+
+.equipe-item-inferior img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-top: 25px;
+}
+
+.equipe p
+{
+    padding-bottom: 10px;
+}
+/* Fim Equipe */
